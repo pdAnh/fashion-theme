@@ -1,0 +1,384 @@
+@media all and (min-width: 320px)
+
+  header
+    #main
+      transition: margin-left .3s
+    .active
+      background-color: $color-grey-9 !important
+      color: $color-white !important
+    .sidenav
+      height: 100%
+      width: 0px
+      position: fixed
+      z-index: 2
+      top: 0
+      left: 0
+      overflow-x: hidden
+      transition: 0.2s
+      background-color: $color-grey-9
+      align-items: center
+
+      &-item
+        padding: 8px 8px 8px 32px
+        text-decoration: none
+        font-size: 15px
+        color: $color-white
+        display: block
+        transition: 0.01s      
+        text-transform: uppercase
+      &:hover
+        color: $palette-dark
+      .closebtn
+        top: 5px
+        left: 10px
+        font-size: 36px
+        text-decoration: none
+        color: $color-text
+      .tab
+      
+        &-list
+          padding: 0px
+          list-style-type: none
+          display: flex
+          justify-content: flex-start
+          background-color: $color-white
+          margin: 0px
+          align-items: center
+          line-height: 45px
+        &-item
+          color: $color-text
+          padding: 10px
+          text-transform: uppercase
+          cursor: pointer
+          width: 100%
+          text-align: center
+          line-height: 45px
+          border: none
+          &:hover
+            background-color: $color-grey-9
+            color: $color-white
+        
+          
+        &-content
+          display: none
+          padding: 0px 
+          .group-menu
+            padding: 0px
+            &-drop
+              display: none
+              padding-left: 10px
+              background-color: $color-white
+              .menu-panel
+                max-width: 100%
+              &-content 
+                .group-drop
+                  &-link
+                    padding: 0px
+                    .link-item
+                      margin: 10px 0px
+                      &:last-child
+                        padding-bottom: 10px
+                      a
+                        font-size: 14px 0px
+                        text-decoration: none
+                        color: $color-text
+                        text-transform: capitalize  
+                  &-title
+                    margin: 0px
+                    margin-bottom: 10px
+                    font-weight: bold
+                    text-transform: capitalize
+                    font-size: 14px
+            .menu
+              &-item
+                text-align: left
+                align-items: center
+                padding: 10px 0px
+                border-bottom: solid $color-grey-5 0.5px
+                .dropdown-toggle
+                  color: $color-white
+                  float: right
+                  margin: 0px 10px
+              &-link
+                color: $color-white
+                text-decoration: none
+                margin-left: 10px
+    .sidebar
+      /* for safari browser */
+      display: -webkit-flex 
+      /* Safari 7.0+ */
+      -webkit-align-items: center 
+      display: flex
+      align-items: center
+      height: 65px
+      justify-content: space-between
+      background-color: $color-white
+    .logo
+      font-size: 2em
+      font-weight: 700
+    .btn
+      font-size: 2em
+      color: #8b8b8b
+      background-color: $color-white
+      border: none
+
+      &-cart
+        // to-do  
+      &-sidebar
+        font-weight: 400
+    .search-wrap
+      background-color: $palette-dark
+      border: $color-black
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin: auto
+      .search-icon
+        color: $color-white
+      .search-input
+        width: 100%
+        text-align: right  
+        background-color: $palette-dark
+        text-transform: uppercase
+        font-style: italic
+        font-size: 0.8em_
+    .menu
+      &-row
+        &:before
+          display: table
+        &:after
+          clear: both
+    .header-container
+      display: none  
+  .owl-carousel
+    .owl-item
+      text-align: center
+      align-items: center
+    .owl-nav
+      position: absolute
+      top: 40%
+      width: 100%
+      display: flex
+      justify-content: space-between
+      .owl-prev
+        background-color: $color-black !important
+        color: $color-white !important
+        margin-left: 3%
+        width: 30px
+        height: 30px
+        border: 2px solid !important
+        border-color: $color-black !important
+        &:hover  
+          background-color: $color-white !important
+          color: $color-black !important
+
+      .owl-next
+        background-color: $color-black !important
+        color: $color-white !important
+        margin-right: 3%
+        padding: 20px !important
+        width: 30px
+        height: 30px
+        border: 2px solid !important
+        border-color: $color-black !important
+        &:hover  
+          background-color: $color-white !important
+          color: $color-black !important
+
+    .owl-dots 
+      text-align: center
+      padding-top: 15px
+      bottom: 10px
+      position: absolute
+      width: 100%
+      .owl-dot 
+        width: 0.8em
+        height: 0.8em
+        border-radius: 50%
+        display: inline-block
+        background-color: #ccc
+        margin: 0 3px
+        &.active 
+            background-color: #000
+
+@media all and (min-width: 1024px)
+  header
+    .sidenav, .sidebar, .search-wrap
+      display: none
+
+    .header
+      &-wrap
+        max-width: 960px
+        margin: auto
+        display: flex
+        justify-content: space-between
+        align-items: center
+      &-container
+        display: block
+        box-sizing: border-box
+        margin: 0
+        padding: 0
+      &-top
+        border-bottom: 1px solid $color-white
+        background-color: #fafafa
+        color: $color-text
+        line-height: 30px
+        height: 30px
+        &-left
+          display: flex
+          float: left
+        &-right
+          display: flex
+          float: right
+      &-logo-cart
+        padding: 10px 0px
+        .cart-wrap
+          display: flex
+          align-items: center
+          line-height: 25px
+          justify-content: space-between
+        .shopping-icon
+          margin-right: 10px
+      &-menu
+        background-color: $color-grey-9
+    .nav-link
+      margin: 0px
+      padding: 0px
+    .nav-link-item
+      text-decoration: none
+      color: $color-text
+      padding: 0px 10px
+      cursor: pointer
+      &:hover
+        color: $color-grey-9
+     
+    .header-dropdown-content
+      display: none
+      position: absolute
+      background-color: #f9f9f9
+      min-width: 160px
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+      z-index: 2
+      a
+        float: none
+        color: $color-text
+        padding: 12px
+        text-decoration: none
+        display: block
+        text-align: left
+        text-transform: uppercase
+        &:hover
+          background-color: $color-grey-5 
+    .header-dropbtn
+      border: none
+      color: $color-text
+      background-color: #fafafa
+      font-size: 14px
+      &:hover
+        color: $color-grey-10  
+    .header-dropdown:hover .header-dropdown-content
+      display: block
+    .form-login-wrap
+      display: none
+      background-color: $color-white
+      position: absolute
+      z-index: 2
+      width: 320px
+      left: auto
+    .form-login
+      padding: 10px
+      display: block
+      border: 1px solid $color-grey-7
+    .form-field
+      padding: 5px
+      margin: 15px 0px
+      border: 1px solid $color-grey-7
+      input
+        padding: 0px 10px
+        width: 200px
+    .form-field-checkbox
+      align-items: center
+      display: flex
+    .btn-login
+      border: none
+      width: 100%
+      background-color: $color-white
+      color: $color-text
+      background-color: $color-grey-10
+      color: $color-white
+      line-height: 50px
+      height: 50px
+      &:hover
+        border: 1px solid
+        background-color: $color-white
+        color: $color-text
+    .btn-forgot-password
+      text-align: center
+      margin: 10px
+      a
+        text-decoration: none
+        color: $color-text
+        font-size: 14px
+        text-transform: uppercase
+        &:hover
+          color: $color-grey-9
+    .main-menu
+      display: flex
+      justify-content: space-between
+      .group-menu
+        padding: 0px
+        display: flex
+        margin: 0px
+        line-height: 40px
+        height: 40px
+        &-item
+          padding: 0px 20px
+          color: $color-white
+          &:hover .menu-content
+            display: block
+
+
+        &-item:hover
+          color: $color-white
+          background-color: $color-grey-7
+        .menu-content
+          display: none
+          position: absolute
+          z-index: 2
+          background-color: $color-white
+          color: $color-text
+          padding: 0px 20px
+          margin-left: -20px
+          .title
+            margin: 10px 0px
+            margin-right: 10px
+            font-weight: bold
+          .groupdrop-link
+            padding: 0px
+            .item
+              a
+                text-decoration: none
+                color: $color-text
+                &:hover
+                  color: $color-grey-10
+          .groupdrop-img
+            right: 0px
+            bottom: 0px
+            max-width: 100%
+            position: absolute
+            z-index: -1
+          .row
+            display: flex
+            justify-content: space-between
+            z-index: 2
+            padding-bottom: 100px
+            .column
+              text-align: left
+              padding-right: 50px
+    .input-search
+      background-color: $color-grey-9
+      color: $color-white
+      input
+        padding: 0px
+        color: $color-white
+        background-color: $color-grey-9
